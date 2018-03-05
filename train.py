@@ -5,7 +5,7 @@ import model
 import data_loader
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--batch_size', default=1, type=int, help='batch size')
+parser.add_argument('--batch_size', default=2, type=int, help='batch size')
 parser.add_argument('--model_dir', default='./train', type=str, help='training data')
 parser.add_argument('--train_steps', default=1000, type=int, help='number of training steps')
 parser.add_argument('--train_dir_sketch', required=True, type=str, help='training data')

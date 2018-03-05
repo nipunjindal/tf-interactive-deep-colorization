@@ -103,7 +103,7 @@ def model_fn(features, labels, mode, params):
     pred_ab_1 = tf.nn.tanh(conv10_ab, name='conv10_ab') * tf.constant(100.0)
 
 
-    loss = tf.losses.huber_loss(labels, prev_ab_1)
+    loss = tf.losses.huber_loss(labels, pred_ab_1)
     optimizer = tf.train.AdamOptimizer()
     train = optimizer.minimize(loss)
 
